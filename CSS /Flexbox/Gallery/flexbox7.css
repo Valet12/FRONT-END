@@ -1,0 +1,18 @@
+*{ /*This universal selector is used todeclare any rule that applies to every elemnt in the CSS code*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+img{
+    border:0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:5px;
+}
+
+.item{
+    margin: 5px;
+}
