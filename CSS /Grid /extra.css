@@ -1,0 +1,22 @@
+body{
+    display:grid;
+    height: 150vh;
+    grid-template-rows:auto 1fr auto;
+}
+
+header{
+    background-color: rgb(255, 127, 255);
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 2em;
+}
+main{
+    background-color: rgb(58, 128, 0);
+    text-align: center;
+    padding: 2em;
+}
+footer{
+    background-color: rgb(231, 183, 138);
+    text-align: center;
+    padding: 2em;
+}
