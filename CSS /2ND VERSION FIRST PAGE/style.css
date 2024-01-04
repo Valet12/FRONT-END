@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+    --main-color: #73a580;
+    --border-ratious: 15px;
+}
+
+/* General rules */
+*{
+    font-family: Verdana, sans-serif;
+    background-color:#e1ad01;
+    color:#3e363f;
+
+}
+
+/* Animation of the logo */
+.container {
+    text-align: center;
+	position: relative;
+	width: 100px;
+	max-width: 100%;
+	height: 200px;
+}
+.image {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+	animation: change-img-anim 30s infinite;
+    width:100px; 
+    height:200px;
+}
+.image:nth-of-type(1) {
+	animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+	animation-delay: 10s;
+}
+.image:nth-of-type(3) {
+	animation-delay: 20s;
+}
+
+@keyframes change-img-anim {
+	0%{ opacity: 0;}
+	10%{ opacity: 1;}
+	90%{ opacity: 1;}
+	100%{ opacity: 0;}
+}
+
+
+/* Properties of the phrase under the logo */
+div>p{
+    text-align:center;  
+    font-size: 13px;
+}
+
+/* Properties of the navigation buttons */
+.btngroup{
+    background-color:var(--main-color);
+    text-align:center; 
+    border-radius: var(--border-ratious);
+}
+
+/* Properties of the buttons in the slider */
+.carousel-indicators,.carousel-control-prev-icon,.carousel-control-next-icon{
+    background-color:transparent;
+}
+
+
+/* Change of the cursos to a plant pot */
+main{
+    cursor: url('plant (1).png'),pointer;  
+}
+
+.col-6{
+    
+    background-color:white ;
+    border-style: solid;
+    border-width: 0px 5px 5px 0px;
+    border-color: #26877f;
+
+}
+.col-6 > img{
+   
+        width:400px;
+        height: 400px;
+        float: left;
+        margin: 10px 90px 30px 10px;
+        
+   
+}
+.col-6 > p{
+    text-align:center;
+}
+
+.col-7 > p{
+    font-size: 12px;
+    text-align: justify;
+    float:right;
+}
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:10;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}

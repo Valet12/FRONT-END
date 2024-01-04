@@ -1,9 +1,11 @@
 *{
-    font-family: monaco, Consolas, "Lucida Console", monospace;
-    cursor: url('plant.cur'),auto;
+    font-family: Verdana, sans-serif;
+    
+    
 }
 main{
     background-color:#26877f ;
+    cursor: url('plant (1).png'),pointer;
     
 }
 .col-6{
@@ -31,4 +33,35 @@ div >p{
     text-align:center;  
     font-size: 20px;
     font-style: oblique;
+}
+
+.col-7 > p{
+    font-size: 12px;
+    text-align: justify;
+    float:right;
+}
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:10;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
 }
