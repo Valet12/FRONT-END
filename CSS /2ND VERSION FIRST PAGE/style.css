@@ -1,14 +1,16 @@
 /* Variables */
 :root {
-    --main-color: #73a580;
-    --border-ratious: 15px;
+    --main-color: #3e998a;
+    --border-ratious: 6px;
+    --main-color2:#ca5a62;
 }
 
 /* General rules */
 *{
     font-family: Verdana, sans-serif;
-    background-color:#e1ad01;
+    background-color:#e2e6ef;
     color:#3e363f;
+     
 
 }
 
@@ -20,37 +22,42 @@
 	max-width: 100%;
 	height: 200px;
 }
-.image {
+.container > img {
+    
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
-	animation: change-img-anim 30s infinite;
     width:100px; 
     height:200px;
 }
-.image:nth-of-type(1) {
-	animation-delay: 0s;
-}
-.image:nth-of-type(2) {
-	animation-delay: 10s;
-}
-.image:nth-of-type(3) {
-	animation-delay: 20s;
-}
-
-@keyframes change-img-anim {
-	0%{ opacity: 0;}
-	10%{ opacity: 1;}
-	90%{ opacity: 1;}
-	100%{ opacity: 0;}
-}
+.top {
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 
 /* Properties of the phrase under the logo */
-div>p{
-    text-align:center;  
-    font-size: 13px;
+.phrase{
+    text-align:center; 
+    font-style: oblique;
 }
 
 /* Properties of the navigation buttons */
@@ -58,67 +65,80 @@ div>p{
     background-color:var(--main-color);
     text-align:center; 
     border-radius: var(--border-ratious);
+    color:white;
 }
+
+
 
 /* Properties of the buttons in the slider */
 .carousel-indicators,.carousel-control-prev-icon,.carousel-control-next-icon{
     background-color:transparent;
 }
 
-
-/* Change of the cursos to a plant pot */
-main{
-    cursor: url('plant (1).png'),pointer;  
+/* Properties of the menu buttons */
+.btngroup >button {
+    background-color:var(--main-color); 
+    color: white;
+    border:none;
+    padding: 13px 25px;
+    text-align: center;
+}
+.btngroup >button:hover {
+    border:solid;
 }
 
-.col-6{
+/* Properties of the  buttons on the articles */
+a > button {
+    background-color:var(--main-color); 
+    border:solid ;
+    border-radius: var(--border-ratious);
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+/* Properties of  the text in the articles */
+.card-body,.card-body> p{
+    background-color:var(--main-color);
+    color: white;
+}
+
+/* Size of the images in the articles */
+.card > img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;   
+}
+
+/* Properties of the article */
+.card{
     
-    background-color:white ;
-    border-style: solid;
-    border-width: 0px 5px 5px 0px;
-    border-color: #26877f;
-
-}
-.col-6 > img{
-   
-        width:400px;
-        height: 400px;
-        float: left;
-        margin: 10px 90px 30px 10px;
-        
-   
-}
-.col-6 > p{
-    text-align:center;
+    width: 20rem;
+    justify-content: center;
 }
 
-.col-7 > p{
-    font-size: 12px;
-    text-align: justify;
-    float:right;
-}
+/* Properties of the map */
 .map-responsive{
-
     overflow:hidden;
-
     padding-bottom:56.25%;
-
     position:relative;
-
     height:0;
-
+}
+.map-responsive iframe{
+    left:0;
+    top:10;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
-.map-responsive iframe{
-
-    left:0;
-
-    top:10;
-
-    height:100%;
-
-    width:100%;
-
-    position:absolute;
-
+/* Properties of the text about the restaurant */
+.about{
+    text-align: center;
+    font-size: 13px ;
+}
+.h-10 {
+    height: 40px;
 }
